@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-bar{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    z-index: 99;
+    color: #938C8C;
+}
+.left-list{
+    display: flex;
+    margin-left: 183px;
+}
+.left-list li , .right-list li{
+    list-style-type: none;
+    padding: 20px;
+}
+.left-list li i{
+    padding-left: 3px;
+}
+.left-list li:hover , .right-list li:hover{
+    color: #FF8500;
+    cursor: pointer;
+}
+.left-list .jobs{
+    position: relative;
+}
+.left-list .jobs:hover .fa-angle-down{
+    visibility: hidden;
+}
+.left-list .jobs:hover .fa-angle-up{
+    visibility: visible;
+}
+.left-list .jobs:hover .hidden-list {
+    visibility:visible;
+}
+.fa-angle-down{
+    position: relative;
+}
+.fa-angle-up{
+    position: absolute;
+    right: 1px;
+    visibility: hidden;
+}
+.left-list .jobs .hidden-list{
+    position: absolute;
+    top: 48px;
+    right: 10px;
+    width: max-content;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    border-radius: 8px;
+    font-size: 16px;
+    visibility: hidden;
+    padding: 0 30px 0 30px;
+}
+.left-list .jobs .hidden-list li{
+    list-style-type: none;
+}
+.left-list .jobs .hidden-list li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+
+}
+.left-list .jobs .trag{
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(50% 0,100% 100%,0% 100%);
+    background-color: black;
+    position: absolute;
+    bottom: 34px;
+    left: 76px
+}
+
+.left-list li  .hidden-list li a:hover{
+    color: #FF8500;
+    cursor: pointer;
+    border-bottom: 1px solid #FF8500;
+}
+.right-list{
+    display: flex;
+}
+.right-list li span{
+    font-weight: 700;
+    color: black;
+}
+.langege{
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    color: #C5BCB3;
+}
+.langege:hover{
+    cursor: pointer;
+}
+.langege span{
+    color: #FF8500;
+}
+
+.jobs-section{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 10px 50px 10px;
+    position: relative;
+    background-image: url('../images/background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.find-job{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 70px;
+}
+.find-job h1{
+    font-size: 24px;
+}
+.find-job p{
+    font-size: 16px;
+}
+.find-job button{
+    background-color: #282828;
+    border: none;
+    width: 180px;
+    color: white;
+    height: 32px;
+    border-radius: 4px;
+    transition: 0.7s ease;
+}
+.find-job button:hover ,.card button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.search{
+    position: relative;
+    margin-top: 70px;
+}
+.search input{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 600px;
+    padding-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.search .icons{
+    position: absolute;
+    right: 0;
+    padding: 0 5px 5px 10px;
+}
+.icons i{
+    color: #938C8C;
+    padding-right: 10px;
+    padding-bottom: 2px;
+}
+.choices{
+    display: flex;
+    margin-top: 20px;
+}
+.choices li{
+    list-style-type: none;
+    padding: 20px 20px 0px 20px;
+    color: #938C8C;
+    font-size: 16px;
+    transition: 0.7s ease;
+    font-weight: 500;
+}
+.choices li:hover{
+    color: black;
+    cursor: pointer;
+}
+.choices li:hover span{
+    color: black;
+    cursor: pointer;
+    border-bottom: 2px solid #FF8500;
+}
+.cards{
+    display: flex;
+    gap: 105px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.card{
+    Width: 305px;
+    background-color: white;
+    box-shadow: 0px 4px 20px #28282826;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+.card .up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .up .right{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.card .up .right p{
+    font-size: 10px;
+    font-weight: 500;
+    color: #282828;
+}
+.card .up span{
+    font-size: 8px;
+    font-weight: 400;
+    color: #938C8C;
+}
+.card h1{
+    font-size: 16px;
+    font-weight:500 ;
+}
+.card ul li{
+    
+    font-size: 12px;
+    font-weight: 400;
+    list-style-type: none;
+    padding-top: 10px;
+    color: #938C8C;
+}
+.card ul li span{
+    color: black;
+}
+.card .down{
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    font-weight: 400;
+    color: #938C8C;
+    position: relative;
+    align-items: center;  
+}
+.card .down p{
+    padding-left: 10px;
+}
+.card .down p::before{
+    content: " ";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #71AA27;
+    position: absolute;
+    left: 2px;
+    top: 3px;
+}
+.card button{
+    height: 44px;
+    background-color: black;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 700;
+    transition: 0.7s ease;
+}
+footer{
+    background-color: #282828;
+    color: #ffffff;
+    padding: 40px;
+    width: 100%;
+    height: 213px;
+}
+footer table{
+text-align: left;
+margin: auto;
+
+}
+footer table th{
+    font-size: 24px;
+    font-weight: 700;
+}
+footer table td{
+    font-size: 16px;
+    font-weight: 400;
+}
+th,td{
+    padding : 0px 50px 0 50px;
+}
+.detils{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.detils hr{
+    width: 670px;
+    margin-left: 15px;
+}
+
