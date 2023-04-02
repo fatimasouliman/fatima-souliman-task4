@@ -55,7 +55,7 @@
 .left-list .jobs .hidden-list{
     position: absolute;
     top: 48px;
-    right: 10px;
+    left: 0;
     width: max-content;
     height: 44px;
     display: flex;
@@ -83,7 +83,7 @@
     background-color: black;
     position: absolute;
     bottom: 34px;
-    left: 76px
+    left: 33px
 }
 
 .left-list li  .hidden-list li a:hover{
