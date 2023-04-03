@@ -19,6 +19,7 @@
 .comp .imges{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 86px;
 }
 .comp .imges .fa-angle-right , .fa-angle-left{
@@ -36,5 +37,17 @@
 }
 .comp .imges div p{
     padding-top: 18px;
+}
+@media(max-width:913px){
+    .comp .imges{
+        gap: 10px;
+        justify-content: center;
+    }
+    .comp .imges .fa-angle-right , .fa-angle-left{
+        display: none;
+    }
+    .comp .imges div{
+        width: 40%;
+    }
 }
 

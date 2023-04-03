@@ -13,9 +13,38 @@
     align-items: center;
     position: fixed;
     width: 100%;
-    height: 40px;
+    height: 48px;
     z-index: 99;
     color: #938C8C;
+    box-shadow: 0px 4px 20px #00000014;
+}
+.logo{
+    position: relative;
+}
+.logo .list{
+    height: 10px;
+    visibility: hidden;
+    position: absolute;
+    top: 27px;
+}
+.logo .right-list{
+    visibility: hidden;
+}
+.logo .left-list,.right-list{
+   visibility: hidden;
+}
+.logo .langege{
+    visibility: hidden;
+}
+.logo .list:hover .left-list,.right-list{
+    visibility: visible;
+}
+.logo .list:hover .right-list{
+    visibility: visible;
+}
+.logo .list:hover .langege{
+    visibility: visible;
+
 }
 .left-list{
     display: flex;
@@ -198,6 +227,7 @@
 }
 .cards{
     display: flex;
+    flex-wrap: wrap;
     gap: 105px;
     margin-top: 20px;
     padding-top: 20px;
@@ -284,22 +314,25 @@ footer{
     padding: 40px;
     width: 100%;
     height: 213px;
+    display: block;
 }
-footer table{
-text-align: left;
-margin: auto;
-
+footer .info{
+    display: flex;
+    gap: 107px;
+    justify-content: center;
 }
-footer table th{
+footer .info .list1{
+    display: flex;
+    flex-direction: column;
+}
+footer .info .list1 h1{
     font-size: 24px;
     font-weight: 700;
 }
-footer table td{
+footer .info .list1 li{
     font-size: 16px;
     font-weight: 400;
-}
-th,td{
-    padding : 0px 50px 0 50px;
+    list-style-type: none;
 }
 .detils{
     align-items: center;
@@ -311,4 +344,69 @@ th,td{
     width: 670px;
     margin-left: 15px;
 }
-
+@media(max-width:913px){
+    .left-list{
+        flex-direction: column;
+        visibility: hidden;
+        background-color: #938c8ccc;
+        margin-left: 3px;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        color: black;
+        font-weight: 500;
+    }
+    .right-list{
+        visibility: hidden;
+        flex-direction: column;
+        background-color: #938c8ccc;
+        margin-left: 3px;
+        color:black;
+        font-weight: 500;
+    }
+    .langege{
+        background-color: #938c8ccc;
+        margin-left: 3px;
+        color:black;
+        font-weight: 500;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        visibility: hidden;
+    }
+    .logo .list{
+        visibility: visible;
+    }
+    .left-list .jobs .hidden-list{
+        flex-direction: column;
+        width: min-content;
+        height: max-content;
+    }
+    .find-job{
+        font-size: 12px;
+    }
+    .search input{
+        width: 300px;
+    }
+    .choices li{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .cards{
+        justify-content: center;
+        gap: 15px;
+    }
+    footer .info{
+        gap: 20px;
+    }
+    footer .info .list1 h1{
+        font-size: 12px;
+    }
+    footer .info .list1 li{
+        font-size: 10px;
+    }
+    .detils{
+        flex-direction: column;
+    }
+    .detils hr{
+        width: 300px;
+    }
+}
