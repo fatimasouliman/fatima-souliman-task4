@@ -16,6 +16,5 @@ function remove() {
     });
     document.querySelectorAll(this.dataset.cat).forEach((el) => {
         el.style.visibility="visible";
-    })
-    
+    })   
 }
