@@ -18,3 +18,11 @@ function remove() {
         el.style.visibility="visible";
     })   
 }
+const search = document.querySelector(".search-jobs .search input");
+const employee = document.querySelectorAll(".card");
+const employeen = document.getElementsByTagName("h1");
+console.log(search.value);
+
+// if (employeeName!==searchValue.value) {
+    
+// }
