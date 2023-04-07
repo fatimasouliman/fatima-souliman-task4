@@ -19,4 +19,19 @@ function remove() {
         
     })   
 }
-
+const searchBar = () => {
+    let search = document.getElementById("search");
+    let filter = search.value.toUpperCase();
+    let employees = document.querySelector(".cards");
+    let employee = document.querySelectorAll(".card");
+    for (i = 0; i < employee.length; i++) {
+        let a = employee[i].getElementsByTagName("h1")[0];
+        let txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            console.log(txtValue.toUpperCase().indexOf(filter));
+            employee[i].style.display = "";
+        } else {
+            employee[i].style.display = "none";
+        }
+    }
+}

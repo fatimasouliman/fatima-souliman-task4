@@ -244,6 +244,12 @@
     margin-top: 20px;
     padding-top: 20px;
 }
+.flex{
+    display: flex;
+}
+.none{
+    display: none;
+}
 .card{
     Width: 305px;
     background-color: white;
