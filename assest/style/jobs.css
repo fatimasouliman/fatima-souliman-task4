@@ -36,8 +36,13 @@
 .logo .langege{
     visibility: hidden;
 }
+.logo .list:hover{
+    cursor: pointer;
+}
+
 .logo .list:hover .left-list,.right-list{
     visibility: visible;
+    
 }
 .logo .list:hover .right-list{
     visibility: visible;
@@ -232,9 +237,10 @@
     border-bottom: 2px solid #FF8500;
 }
 .cards{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 105px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    justify-items: center;
     margin-top: 20px;
     padding-top: 20px;
 }

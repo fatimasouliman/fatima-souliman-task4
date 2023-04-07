@@ -12,17 +12,11 @@ function removeActive() {
 }
 function remove() {
     cards.forEach((card) => {
-        card.style.visibility="hidden";
+        card.style.display="none";
     });
     document.querySelectorAll(this.dataset.cat).forEach((el) => {
-        el.style.visibility="visible";
+        el.style.display="flex";
+        
     })   
 }
-const search = document.querySelector(".search-jobs .search input");
-const employee = document.querySelectorAll(".card");
-const employeen = document.getElementsByTagName("h1");
-console.log(search.value);
 
-// if (employeeName!==searchValue.value) {
-    
-// }
